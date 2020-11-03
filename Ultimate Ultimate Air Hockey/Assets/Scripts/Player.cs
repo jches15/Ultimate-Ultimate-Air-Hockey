@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
         var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         transform.position += move * speed * Time.deltaTime;
     }
+
+
+    //move this to a puck script 
     private void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.CompareTag("puck")){
             Vector2 movement = new Vector2(5, -3);
