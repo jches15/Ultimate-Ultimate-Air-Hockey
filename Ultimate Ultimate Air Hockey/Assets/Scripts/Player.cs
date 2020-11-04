@@ -17,14 +17,4 @@ public class Player : MonoBehaviour
         transform.position += move * speed * Time.deltaTime;
     }
 
-
-    //move this to a puck script 
-    private void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.CompareTag("puck")){
-            Vector2 movement = new Vector2(5, -3);
-            Debug.Log("Collision True");
-            //col.Rigidbody2D.AddForce(10 * 10);
-            //col.transform.Translate(movement * 19 * Time.deltaTime); //= new Vector2(speed*Time.deltaTime, speed*Time.deltaTime); 
-        }
-    }
 }
