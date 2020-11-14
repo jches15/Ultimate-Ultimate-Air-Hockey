@@ -9,22 +9,24 @@ public class ColliderEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
+        //GetComponent<BoxCollider2D>().enabled = true;
+        Physics2D.IgnoreCollision(puck.GetComponent<CircleCollider2D>(), transform.GetComponent<BoxCollider2D>());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(puck.position.x < 3.30){
+        
+    }
+    
+    /*
+    private void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag == "player"){
             GetComponent<BoxCollider2D>().enabled = true;
         }
-    }
-    private void OnTriggerEnter2D(Collision2D col){
-        if(col.gameObject.tag == "puck"){
-            GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else{
+        else if(col.gameObject.tag == "eneny"){
             GetComponent<BoxCollider2D>().enabled = true;
         }
-    }
+    }*/
 }

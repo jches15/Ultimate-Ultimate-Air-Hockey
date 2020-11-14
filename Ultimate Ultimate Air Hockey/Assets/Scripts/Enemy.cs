@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //startingPosition = rb.position;
         startingPosition = transform.position;
+        //GetComponent<Collider>().material.bounciness = 0f;
 
     }
 
@@ -29,12 +30,13 @@ public class Enemy : MonoBehaviour
         targetPosition.x = thePuck.position.x;
         targetPosition.y = thePuck.position.y;
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementSpeed * Time.fixedDeltaTime);
+        /*
         if(transform.position.x == 5.40){
             targetPosition.x = 3;
             targetPosition.y = thePuck.position.y;
             while(transform.position.x > 3){
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementSpeed * Time.fixedDeltaTime);
             }
-        }
+        }*/
     }
 }
