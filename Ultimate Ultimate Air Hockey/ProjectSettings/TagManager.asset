@@ -6,6 +6,7 @@ TagManager:
   tags:
   - puck
   - player
+  - enemy
   layers:
   - Default
   - TransparentFX
