@@ -17,9 +17,9 @@ public class Score : MonoBehaviour
 public void Increment(Scores whichScore)
 {
     if(whichScore == Scores.AiScore)
-        AiScoreTxt.text = (++aiScore).ToString();
+        AiScoreTxt.text = "AI: " + (++aiScore).ToString();
     else
-        PlayerScoreTxt.text = (++playerScore).ToString();
+        PlayerScoreTxt.text = "Player: " + (++playerScore).ToString();
 
 
 
